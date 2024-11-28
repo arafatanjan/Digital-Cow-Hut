@@ -1,0 +1,15 @@
+{
+  "name": "digital-cow-hut",
+  "version": "1.0.0",
+  "main": "src/server.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "arafat",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "node-modules": "^1.0.1"
+  }
+}
