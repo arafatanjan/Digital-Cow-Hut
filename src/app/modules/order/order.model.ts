@@ -1,8 +1,8 @@
 import { Schema, model, Types } from 'mongoose';
-import  Cow  from '../cow/cow.model';  
-import  User  from '../user/user.model';  
+import Cow from '../cow/cow.model';  
+import User from '../user/user.model';  
 
-// Enum for Order Status (optional)
+// Enum for Order Status
 export enum OrderStatus {
   PENDING = 'pending',
   COMPLETED = 'completed',
@@ -14,7 +14,7 @@ const orderSchema = new Schema(
   {
     cow: {
       type: Types.ObjectId,
-      ref: 'Cow',  // Reference to the Cow model
+      ref: 'Cow',
       required: true,
     },
     buyer: {
@@ -29,7 +29,7 @@ const orderSchema = new Schema(
     },
     status: {
       type: String,
-      enum: Object.values(OrderStatus), 
+      enum: Object.values(OrderStatus),
       default: OrderStatus.PENDING,  
     },
     orderDate: {
@@ -46,7 +46,9 @@ const orderSchema = new Schema(
   }
 );
 
-// Create the Order model based on the schema
+// Create the Order model
 const Order = model('Order', orderSchema);
 
-export { Order, OrderStatus };
+// Use default export for Order
+export default Order;
+

@@ -1,7 +1,7 @@
 import  User  from "../user/user.model";
 import  Cow  from "../cow/cow.model";
 import { CowLabel } from '../cow/cow.interface';
- import  {Order}  from "./order.model";
+ import  Order  from "./order.model";
 
  
 import mongoose from "mongoose";
